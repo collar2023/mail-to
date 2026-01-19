@@ -1,4 +1,5 @@
-# mail-to: Secure Digital Information Delivery System
+# Open-source Digital Legal Delivery System
+Secure, verifiable, end-to-end encrypted digital service of process.
 
 > **Privacy-First. End-to-End Encrypted. Self-Hostable.**
 >
