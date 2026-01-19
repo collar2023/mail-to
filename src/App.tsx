@@ -313,10 +313,9 @@ const App: React.FC = () => {
           </a>
           <div className="brand">Digital Delivery & Sovereignty Anchor</div>
         </div>
-        {pda && <div className="status-badge">{status?.status === 1 ? '✅ 已签收' : '⏳ 待签收'}</div>}
-      </header></header>
-      <main className="stage">
-        <div className="sender-view">
+                {pda && <div className="status-badge">{status?.status === 1 ? '✅ 已签收' : '⏳ 待签收'}</div>}
+              </header>
+              <main className="stage">        <div className="sender-view">
           <h1 className="hero-title">{mode === 'delivery' ? '全球信息数字送达系统' : '原创权益数字主权声明'}</h1>
           <div className="hero-slogan">
             {mode === 'delivery' ? (
