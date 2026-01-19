@@ -613,6 +613,12 @@ export default {
     if (path.endsWith(".js")) headers.set("Content-Type", "application/javascript");
     if (path.endsWith(".css")) headers.set("Content-Type", "text/css");
     if (path.endsWith(".html")) headers.set("Content-Type", "text/html");
+    
+    // 🛡️ 注入 2.0 版确权 Proof (从环境变量读取)
+    if (env.SOLANA_TX_PROOF) {
+      headers.set("x-project-ownership-proof", env.SOLANA_TX_PROOF);
+    }
+    
     return new Response(asset.body, { headers });
   },
   
