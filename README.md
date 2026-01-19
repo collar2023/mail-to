@@ -1,82 +1,88 @@
-# Open-source Digital Legal Delivery System
-Secure, verifiable, end-to-end encrypted digital service of process.
+# Open-source Digital Trust Delivery System
 
-> **Privacy-First. End-to-End Encrypted. Self-Hostable.**
+> **Secure, verifiable, and end-to-end encrypted information distribution protocol.**
 >
-> Open source version of the `mail-to` protocol.
+> *High-integrity infrastructure for sensitive communication, digital provenance, and proof-of-delivery.*
 
 ![License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)
+![Architecture](https://img.shields.io/badge/Architecture-Zero--Knowledge-green)
+![Security](https://img.shields.io/badge/Security-High--Integrity-blue)
 
-## Overview
+## 💎 Core Value & Market Scarcity
 
-`mail-to` is a secure digital delivery system designed to ensure that your message reaches *only* the intended recipient. Built on Cloudflare Workers, D1, and R2, it combines the scalability of serverless architecture with the privacy of client-side encryption.
+Mail-To addresses a critical gap in digital communication: the ability to prove delivery and integrity without sacrificing privacy or relying on centralized trust.
 
-This repository contains the **Community Edition** source code. It is designed for individuals who demand absolute control over their data and wish to self-host the entire infrastructure.
+> **"How do you mathematically verify: 'I sent it', 'You received it', and 'The content is exactly as intended'?"**
 
-## Features
+We achieve this through a unique architectural combination:
 
-*   **Zero-Knowledge Architecture**: The server (Cloudflare Worker) never sees the unencrypted content of your messages.
-*   **Blockchain Evidence**: Integration with Solana for immutable proof of delivery (optional).
-*   **Serverless**: Powered by Cloudflare Workers for low latency and high availability.
-*   **Self-Hostable**: You own the infrastructure.
+1.  **Zero-Knowledge Privacy**: Content is encrypted on the client; the infrastructure provider never has access to the keys or plaintext.
+2.  **Self-Hostable Sovereignty**: Users retain absolute control over their communication nodes and data governance.
+3.  **Cryptographic Proof (Optional)**: Anchoring hashes to a public ledger (Solana) provides a neutral, third-party verifiable timestamp of existence and integrity.
 
-## Architecture
+This is a **High-Integrity Communication Protocol** designed for:
+*   **Official Notifications**: Verifiable delivery of notices, alerts, and instructions.
+*   **Compliance & Audit**: Maintaining a tamper-proof trail of sensitive data transfers.
+*   **Digital Provenance**: Anchoring original work and IP before external disclosure.
 
-*   **Frontend**: React + Vite (Single Page Application)
-*   **Backend**: Cloudflare Workers (Edge Compute)
-*   **Storage**:
-    *   **Cloudflare D1** (SQLite): Metadata and status tracking.
-    *   **Cloudflare R2** (Object Storage): Encrypted payloads and assets.
-*   **Durability**: Cloudflare Durable Objects for consistent state management.
+---
 
-## Getting Started (Self-Hosting)
+## 📚 Documentation & Scenarios
 
-### Prerequisites
+*   **[Use Cases: Verifiable Delivery & Compliance](docs/use-cases.md)**
+    *   📡 **Official Notifications**: Reliable delivery with cryptographic receipts.
+    *   🛡️ **Provenance & Rights**: Establishing "Priority of Existence" for digital assets.
+    *   🏢 **Compliance & Control**: Secure, audit-ready transmission of sensitive credentials.
+*   **[Architecture & Trust Model](docs/architecture.md)**: How the Zero-Knowledge engine ensures trustless operation.
+*   **[Security Policy](SECURITY.md)**: Threat modeling and security boundaries.
 
-1.  Node.js (v18+) and npm
-2.  Cloudflare Account (Free tier works for personal use)
-3.  [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/) installed globally.
+---
+
+## 🏗️ Architecture Maturity
+
+*   **Global Edge**: Powered by Cloudflare Workers for low-latency, stateless execution.
+*   **Atomic Consistency**: Durable Objects manage delivery state to prevent race conditions.
+*   **Standard Crypto**: Built on TweetNaCl (XSalsa20-Poly1305) for audited, high-speed encryption.
+
+## 🚀 Getting Started (Self-Hosting)
+
+**Prerequisites**: Node.js (v18+), Cloudflare Account, Wrangler CLI.
 
 ### Installation
 
-1.  Clone this repository:
+1.  **Clone**
     ```bash
     git clone https://github.com/collar2023/mail-to.git
-    cd mail-to
+    cd mail-to/opensource_release
     ```
 
-2.  Install dependencies:
+2.  **Install**
     ```bash
     npm install
     ```
 
-3.  Configure Cloudflare Resources:
-    *   Create a D1 database: `npx wrangler d1 create lawyer-db`
-    *   Create R2 buckets: `mail-to-ui-assets` and `mail-to-payloads`
-    *   Update `wrangler.toml` with your new IDs.
+3.  **Configure**
+    *   `npx wrangler login`
+    *   `npx wrangler d1 create lawyers-db` (Database name can be customized in wrangler.toml)
+    *   `npx wrangler r2 bucket create mail-to-ui-assets`
+    *   `npx wrangler r2 bucket create mail-to-payloads`
+    *   **Update `wrangler.toml`** with your resource IDs.
 
-4.  Deploy:
+4.  **Deploy**
     ```bash
     npm run deploy
     ```
 
-## Development
+## 🤝 Commercial & Managed Services
 
-Run the local development server:
+For organizations requiring managed infrastructure, SLAs, and enterprise-grade support:
 
-```bash
-npm run dev
-```
+*   **SaaS Hosting**: Use our globally optimized nodes with 99.9% uptime.
+*   **Advanced Analytics**: Visualized delivery and access audit trails.
+*   **Enterprise Branding**: Fully customizable white-label solutions.
 
-## License
+[Contact Us for Licensing & Services](mailto:8188019@gmail.com)
 
-This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+## 📄 License
 
-*   **Freedom**: You are free to use, modify, and distribute this software.
-*   **Community**: If you modify this software and provide it as a service over a network (SaaS), you **must** release your source code under the same license.
-
-See [LICENSE](LICENSE) for details.
-
-## Commercial Licensing
-
-For enterprise use cases, custom integrations, or managed hosting without the AGPL copyleft requirements, please contact us for a commercial license.
+**AGPL-3.0**: Free for personal and internal use. Commercial distribution requires open-sourcing modifications or obtaining a commercial license.
