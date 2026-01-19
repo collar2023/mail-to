@@ -48,7 +48,7 @@ max_batch_size = 1
 [vars]
 PROJECT_NAME = "Global Digital Information Delivery System"
 AUTHOR = "Fu Teng"
-SOLANA_TX_PROOF = "<SOLANA_TX_PROOF_PENDING>"
+SOLANA_TX_PROOF = "KwEnH7t563JAsfXJ52WfeABAh1Caudxt4tFfiQ5pyKgK6rY8PrxzHYJu4hJjRZ38YuztVgryhqrrUk6hshf4zRz"
 COPYRIGHT_NOTICE = "Copyright (c) 2025 Fu Teng. All rights reserved."
 
 [observability]
