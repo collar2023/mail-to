@@ -122,6 +122,25 @@ body::before {
   flex-shrink: 0;
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.github-link {
+  color: #fff;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.github-link:hover {
+  opacity: 1;
+  color: var(--accent-cyan);
+}
+
 /* --- 主要布局 --- */
 .stage { 
   flex: 1; 
