@@ -1,0 +1,56 @@
+name = "mail-to"
+main = "index.ts"
+compatibility_date = "2025-01-01"
+
+# Compatibility flags
+compatibility_flags = [ "nodejs_compat" ]
+
+# 1. Routing
+routes = [{ pattern = "to.example.com", custom_domain = true }]
+
+# 2. R2 Storage
+[[r2_buckets]]
+binding = "STATIC_ASSETS"
+bucket_name = "mail-to-ui-assets"
+
+[[r2_buckets]]
+binding = "CONTENT_BUCKET"
+bucket_name = "mail-to-payloads"
+
+# 3. Durable Object (SQLite)
+[[durable_objects.bindings]]
+name = "LETTER_STORAGE"
+class_name = "LetterDO"
+
+[[migrations]]
+tag = "v10"
+new_sqlite_classes = ["LetterDO"]
+
+# 4. D1 Database (Sanitized)
+[[d1_databases]]
+binding = "DB"
+database_name = "lawyer-db"
+database_id = "<YOUR_D1_DATABASE_ID>"
+
+# 5. Browser Rendering
+[browser]
+binding = "BROWSER"
+
+# 6. PDF Generation Queue
+[[queues.producers]]
+binding = "PDF_QUEUE"
+queue = "mail-to-pdf-gen"
+
+[[queues.consumers]]
+queue = "mail-to-pdf-gen"
+max_batch_size = 1
+
+[vars]
+PROJECT_NAME = "Global Digital Information Delivery System"
+AUTHOR = "Fu Teng"
+SOLANA_TX_PROOF = "<SOLANA_TX_PROOF_PENDING>"
+COPYRIGHT_NOTICE = "Copyright (c) 2025 Fu Teng. All rights reserved."
+
+[observability]
+enabled = true
+head_sampling_rate = 1
