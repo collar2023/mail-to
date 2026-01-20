@@ -85,4 +85,4 @@ For organizations requiring managed infrastructure, SLAs, and enterprise-grade s
 
 ## 📄 License
 
-**AGPL-3.0**: Free for personal and internal use. Commercial distribution requires open-sourcing modifications or obtaining a commercial license.
+**AGPL-3.0**: Open Source & Copyleft. You are free to use and modify. However, if you provide this software as a service over a network, you **must** release your source code under the same license. For proprietary use cases or managed hosting, a commercial license is required.
