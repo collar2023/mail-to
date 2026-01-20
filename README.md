@@ -63,7 +63,7 @@ This is a **High-Integrity Communication Protocol** designed for:
 
 3.  **Configure**
     *   `npx wrangler login`
-    *   `npx wrangler d1 create lawyers-db` (Database name can be customized in wrangler.toml)
+    *   `npx wrangler d1 create lawyer-db`
     *   `npx wrangler r2 bucket create mail-to-ui-assets`
     *   `npx wrangler r2 bucket create mail-to-payloads`
     *   **Update `wrangler.toml`** with your resource IDs.

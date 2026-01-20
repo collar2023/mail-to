@@ -19,7 +19,7 @@ Thank you for your interest in the Mail-To Open Source Digital Trust Delivery Sy
 
 1.  **Fork & Clone**:
     ```bash
-    git clone https://github.com/YOUR_USERNAME/mail-to.git
+    git clone https://github.com/<YOUR_USERNAME>/mail-to.git
     cd mail-to/opensource_release
     ```
 

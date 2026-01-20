@@ -1,9 +1,9 @@
 {
-  "name": "Global Digital Information Delivery System",
+  "name": "mail-to",
   "private": true,
   "version": "1.0.0",
   "author": "FU TENG",
-  "license": "UNLICENSED",
+  "license": "AGPL-3.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
