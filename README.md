@@ -73,6 +73,18 @@ This is a **High-Integrity Communication Protocol** designed for:
     npm run deploy
     ```
 
+## 📊 Edition Comparison
+
+| Feature | Community Edition (Open Source) | Commercial / Managed Service |
+| :--- | :---: | :---: |
+| **Zero-Knowledge Encryption** | ✅ Included | ✅ Included |
+| **Infrastructure Control** | ✅ Full Self-Hosting | ❌ Managed by Us |
+| **Legal Neutrality** | ⚠️ Self-Affirmed (First Party) | ✅ Third-Party Neutral Witness |
+| **Setup & Maintenance** | Manual (DIY) | Instant (SaaS) |
+| **Audit Trails** | Raw Database Logs | Compliance-Ready Reports |
+| **Service Level Agreement (SLA)** | None | ✅ Enterprise SLA |
+| **License** | AGPL-3.0 (Copyleft) | Commercial (Proprietary) |
+
 ## 🤝 Commercial & Managed Services
 
 For organizations requiring managed infrastructure, SLAs, and enterprise-grade support:
